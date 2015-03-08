@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Spacebook' /}
+
+<nav class="ui menu">   
+  <a class="ui active item" href="/home">Back to Home</a> 
+</nav>
+
+<section class="ui raised segment">
+  <div class="ui small header"> ${name}'s Profile</div>
+  <section class="ui  two column grid segment">
+    <div class="row">
+      <div class="column">
+        <div class="ui medium image">
+          <img src="/public/images/${name}.gif"/>  
+        </div>  
+      </div>
+      <div class="column">
+        <h2> Messages </h2> 
+        <ul> 
+          <li>homer says..."What time is dinner?"</li>      
+          <li>lisa says..."Where is my saxaphone?"</li>      
+          <li>homer says..."Where are you?"</li>      
+        </ul> 
+      </div>
+    </div>
+  </section>    
+</section>

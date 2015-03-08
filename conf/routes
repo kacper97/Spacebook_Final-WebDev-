@@ -14,6 +14,8 @@ GET     /members                                Members.index
 # Profile page
 GET     /profile                                Profile.index
 
+# Public Profiles
+GET     /publicprofile/{name}                   PublicProfile.visit
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -13,4 +13,11 @@ public class PublicProfile extends Controller
   {
     render();
   }
+  
+  public static void visit(String name)
+  {
+    Logger.info("Just visiting the page for " + name);
+    render(name);
+  }  
+
 }
