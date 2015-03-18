@@ -3,7 +3,14 @@
 # ~~~~
 
 # Landing page
-GET     /                                       Home.index
+GET    /                                        Accounts.index
+
+# Accounts
+
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+GET    /logout                                  Accounts.logout
+
 
 # Home page
 GET     /home                                   Home.index
