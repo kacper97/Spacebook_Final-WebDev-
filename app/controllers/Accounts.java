@@ -39,8 +39,9 @@ public class Accounts extends Controller
     index();
   }
 
-  public static void authenticate()
-  { 
+  public static void authenticate(String email, String password)
+  {
+    Logger.info("Attempting to authenticate with " + email + ":" + password);
     Home.index();
   }
 }

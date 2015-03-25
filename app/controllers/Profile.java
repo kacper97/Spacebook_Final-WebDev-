@@ -13,4 +13,10 @@ public class Profile extends Controller
   {
     render();
   }
+  
+  public static void changeStatus(String profiletext)
+  {
+    Logger.info("Status changed to " + profiletext);
+    index();
+  }  
 }

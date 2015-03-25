@@ -21,6 +21,7 @@ GET     /members                                Members.index
 
 # Profile page
 GET     /profile                                Profile.index
+POST    /profile/changestatus                   Profile.changeStatus
 
 # Public Profiles
 GET     /publicprofile/{name}                   PublicProfile.visit
