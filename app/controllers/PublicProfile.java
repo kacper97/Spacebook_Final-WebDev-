@@ -14,10 +14,10 @@ public class PublicProfile extends Controller
     render();
   }
   
-  public static void visit(String name)
+  public static void visit(Long id)
   {
-    Logger.info("Just visiting the page for " + name);
-    render(name);
+    User user = User.findById(id);
+    Logger.info("Just visiting the page for " + user.firstName + ' ' + user.lastName );
+    render(user);
   }  
-
 }

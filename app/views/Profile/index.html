@@ -22,6 +22,11 @@
         </form>
       </div>
       <div class="ui column form segment">
+        <h2 class="ui small header"> Status</h2>
+        <div class="ui green block label">
+          <p> ${user.statusText} </p>
+        </div>
+        <hr>
         <form action="/profile/changestatus" method="post">
           <h3 class="ui inverted teal block header">Enter Status</h3>
           <textarea class="ui field" name="profiletext"> </textarea>

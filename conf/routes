@@ -15,16 +15,18 @@ POST   /register                                Accounts.register
 
 # Home page
 GET     /home                                   Home.index
+GET     /home/drop/{id}                         Home.drop
 
 # Members page
 GET     /members                                Members.index
+GET     /members/follow/{id}                    Members.follow
 
 # Profile page
 GET     /profile                                Profile.index
 POST    /profile/changestatus                   Profile.changeStatus
 
 # Public Profiles
-GET     /publicprofile/{name}                   PublicProfile.visit
+GET     /publicprofile/{id}                     PublicProfile.visit
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
