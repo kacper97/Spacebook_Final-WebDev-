@@ -23,6 +23,6 @@ public class Members extends Controller
     User me = User.findById(Long.parseLong(userId));
     
     me.befriend(friend);
-    index();
+    Home.index();
   }
 }
