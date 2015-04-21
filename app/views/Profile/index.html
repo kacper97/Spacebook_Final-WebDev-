@@ -14,10 +14,10 @@
     <div class="ui row">
       <div class="ui column">
         <p>
-          <img src="/public/images/homer.gif" />
+          <img src="/profile/getpicture/${user.id}">
         </p>
-        <form action="homeprofile/upload" method="post" enctype="multipart/form-data">
-          <input type="file" name="userfile" value="" /> 
+        <form action="/profile/uploadpicture/${user.id}" method="post" enctype="multipart/form-data">    
+          <input type="file" name="picture" /> 
           <input type="submit" name="submit" value="upload" />
         </form>
       </div>

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import play.db.jpa.Blob;
 import play.db.jpa.Model;
 
 @Entity
@@ -16,6 +17,8 @@ public class User extends Model
   public String email;
   public String password;
   public String statusText;
+  
+  public Blob   profilePicture;
   
   @OneToMany(mappedBy = "sourceUser")
   public List<Friendship> friendships = new ArrayList<Friendship>();
