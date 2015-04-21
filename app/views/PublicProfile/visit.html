@@ -14,14 +14,25 @@
         <div class="ui medium image">
           <img src="/public/images/${name}.gif"/>  
         </div>  
+        <form action="/publicprofile/sendmessage/${user.id}" class="ui form" method="post">
+          <div class="field">
+            <textarea name="messageText"></textarea>
+          </div>
+          <button  class="ui fluid blue labeled submit icon button">
+            <i class="icon edit"></i> Send
+          </button>
+        </form>        
       </div>
       <div class="column">
         <h2> Messages </h2> 
-        <ul> 
-          <li>homer says..."What time is dinner?"</li>      
-          <li>lisa says..."Where is my saxaphone?"</li>      
-          <li>homer says..."Where are you?"</li>      
-        </ul> 
+        <hr>
+        <ul>
+          #{list items:user.inbox, as:'message'}
+            <li> 
+              ${message.from.firstName} says...  ${message.messageText}
+            </li>
+          #{/list}
+        </ul>
       </div>
     </div>
   </section>    

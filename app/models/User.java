@@ -20,6 +20,12 @@ public class User extends Model
   @OneToMany(mappedBy = "sourceUser")
   public List<Friendship> friendships = new ArrayList<Friendship>();
   
+  @OneToMany(mappedBy = "to")
+  public List<Message> inbox = new ArrayList<Message>();
+
+  @OneToMany(mappedBy = "from")
+  public List<Message> outbox = new ArrayList<Message>();
+  
   public User(String firstName, String lastName, String email, String password)
   {
     this.firstName = firstName;
@@ -62,4 +68,11 @@ public class User extends Model
     save();
   }
   
+  public void sendMessage (User to, String messageText)
+  {
+    Message message = new Message (this, to, messageText);
+    outbox.add(message);
+    to.inbox.add(message);
+    message.save();
+  }
 }

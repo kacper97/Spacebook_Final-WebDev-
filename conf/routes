@@ -27,6 +27,7 @@ POST    /profile/changestatus                   Profile.changeStatus
 
 # Public Profiles
 GET     /publicprofile/{id}                     PublicProfile.visit
+POST    /publicprofile/sendmessage/{id}         PublicProfile.sendMessage
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

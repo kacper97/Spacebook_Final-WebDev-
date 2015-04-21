@@ -20,4 +20,19 @@ public class PublicProfile extends Controller
     Logger.info("Just visiting the page for " + user.firstName + ' ' + user.lastName );
     render(user);
   }  
+  
+  public static void sendMessage(Long id, String messageText)
+  {
+    String userId = session.get("logged_in_userid");
+    User fromUser = User.findById(Long.parseLong(userId));
+    User toUser = User.findById(id);
+
+    Logger.info("Message from user " + 
+        fromUser.firstName + ' ' + fromUser.lastName +" to " +
+        toUser.firstName + ' ' + toUser.lastName +": " +
+        messageText);    
+
+    fromUser.sendMessage(toUser, messageText);
+    visit(id);
+  } 
 }
