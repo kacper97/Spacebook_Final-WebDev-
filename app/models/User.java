@@ -17,6 +17,8 @@ public class User extends Model
   public String email;
   public String password;
   public String statusText;
+  public String nationality;
+  public int age;
   
   public Blob   profilePicture;
   
@@ -29,12 +31,14 @@ public class User extends Model
   @OneToMany(mappedBy = "from")
   public List<Message> outbox = new ArrayList<Message>();
   
-  public User(String firstName, String lastName, String email, String password)
+  public User(String firstName, String lastName, String email, String password, String nationality, int age)
   {
     this.firstName = firstName;
     this.lastName  = lastName;
     this.email     = email;
     this.password  = password;
+    this.age 	   = age;
+    this.nationality = nationality;
   }
   
   public static User findByEmail(String email)
@@ -71,11 +75,13 @@ public class User extends Model
     save();
   }
   
-  public void sendMessage (User to, String messageText)
+  public void sendMessage (User to, String messageSubject, String messageText)
   {
-    Message message = new Message (this, to, messageText);
+    Message message = new Message (this, to, messageSubject, messageText);
     outbox.add(message);
     to.inbox.add(message);
     message.save();
   }
+  
+  
 }

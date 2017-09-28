@@ -3,9 +3,77 @@ User(homer):
     lastName: Simpson
     email: homer@simpson.com
     password: secret
+    nationality: American
+    age: 38
 
 User(marge):
     firstName: Marge
     lastName: Simpson
     email: marge@simpson.com
     password: secret
+    nationality: American
+    age: 34
+    
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+    nationality: American
+    age: 10
+    
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    email: lisa@simpson.com
+    password: secret
+    nationality: American
+    age: 8
+    
+User(ned):
+    firstName: Ned
+    lastName: Flanders
+    email: ned@flanders.com 
+    password: secret
+    nationality: American
+    age: 60
+    
+User(moe):
+    firstName: Moe
+    lastName: Szyslak
+    email: moe@szyslak.com
+    password: secret
+    nationality: Dutch
+    age: 46
+    
+User(apu):
+    firstName: Apu
+    lastName: Nahasapeemapetilon
+    email: apu@india.com
+    password: secret
+    nationality: Indian
+    age: 49
+    
+User(barney):
+    firstName: Barney
+    lastName: Gumble
+    email: barney@gumble.com
+    password: secret
+    nationality: American
+    age: 42
+    
+User(ralph):
+    firstName: Ralph
+    lastName: Wiggum
+    email: ralph@wiggum.com 
+    password: secret
+    nationality: American
+    age: 9
+    
+User(waylon):
+    firstName: Waylon 
+    lastName: Smithers
+    email: waylon@smithers.com
+    password: secret
+    nationality: American 
+    age: 30

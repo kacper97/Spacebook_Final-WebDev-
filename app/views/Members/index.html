@@ -5,7 +5,7 @@
   <a class="ui item" href="/home">Home</a>      
   <a class="ui active item" href="/members">Members</a>   
   <a class="ui item" href="/profile">Profile</a>   
-  <a class="ui item" href="/login">Logout</a>      
+  <a class="ui item" href="/logout">Logout</a>      
 </nav>
 
 <section class="ui segment">
@@ -17,7 +17,11 @@
         <div class="content">
           ${user.firstName} ${user.lastName} <a href="/members/follow/${user.id}"> (follow) </a>
         </div>
+       <div class="ui green block label">
+          <p> ${user.statusText} </p>
+        </div>
       </div> 
     #{/list}
   </div>
 </section>
+

@@ -11,7 +11,7 @@ public class PublicProfile extends Controller
 {
   public static void index()
   {
-    render();
+				 render();
   }
   
   public static void visit(Long id)
@@ -21,7 +21,7 @@ public class PublicProfile extends Controller
     render(user);
   }  
   
-  public static void sendMessage(Long id, String messageText)
+  public static void sendMessage(Long id, String messageSubject, String messageText)
   {
     String userId = session.get("logged_in_userid");
     User fromUser = User.findById(Long.parseLong(userId));
@@ -29,10 +29,10 @@ public class PublicProfile extends Controller
 
     Logger.info("Message from user " + 
         fromUser.firstName + ' ' + fromUser.lastName +" to " +
-        toUser.firstName + ' ' + toUser.lastName +": " +
+        toUser.firstName + ' ' + toUser.lastName +": " + messageSubject +
         messageText);    
 
-    fromUser.sendMessage(toUser, messageText);
+    fromUser.sendMessage(toUser, messageSubject, messageText);
     visit(id);
   } 
 }

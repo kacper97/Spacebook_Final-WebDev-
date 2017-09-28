@@ -12,8 +12,14 @@ public class Home extends Controller
   public static void index()
   {
     String userId = session.get("logged_in_userid");
-    User user = User.findById(Long.parseLong(userId));
-    render(user);
+    
+    if (userId==null)
+    	Accounts.index();
+		else
+		{
+			 User user = User.findById(Long.parseLong(userId));
+			 render(user);
+		}
   }
   
   public static void drop(Long id)

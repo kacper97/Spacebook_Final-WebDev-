@@ -24,17 +24,17 @@ public class Accounts extends Controller
     session.clear();
     index();
   }
-  
+
   public static void index()
   {
     render();
   }
   
-  public static void register(String firstName, String lastName, String email, String password)
+  public static void register(String firstName, String lastName, String email, String password, String nationality, int age)
   {
-    Logger.info(firstName + " " + lastName + " " + email + " " + password);
+    Logger.info(firstName + " " + lastName + " " + email + " " + password + " " + nationality + " " + age);
     
-    User user = new User (firstName, lastName, email, password);
+    User user = new User (firstName, lastName, email, password, nationality, age);
     user.save();
     
     index();
